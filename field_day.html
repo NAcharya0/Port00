@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Field Day Sound</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Field Day Sound">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Welcome to Field Day Sound. We are an award winning creative sound and music company based out of Portland, Oregon">
+    <meta property="og:image" content="https://fielddaysound.tv/og.jpeg">
+    <meta property="twitter:title" content="Field Day Sound">
+    <meta property="twitter:description"
+        content="Welcome to Field Day Sound. We are an award winning creative sound and music company based out of Portland, Oregon">
+    <meta property="twitter:image" content="https://fielddaysound.tv/og.jpeg">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://fielddaysound.tv/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://fielddaysound.tv/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://fielddaysound.tv/favicon-16x16.png">
+    <meta name="description"
+        content="Award winning sound design, music, and mix for brands and directors across the globe. Based in Portland, Oregon.">
+    <link rel="modulepreload" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/entry.bdabb5c6.js">
+    <link rel="preload" as="style" href="https://fielddaysound.tv/_nuxt/entry.d23ba404.css">
+    <link rel="modulepreload" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/default.c8ec9ed4.js">
+    <link rel="modulepreload" as="script" crossorigin
+        href="https://fielddaysound.tv/_nuxt/_plugin-vue_export-helper.c27b6911.js">
+    <link rel="modulepreload" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/Maths.69863392.js">
+    <link rel="modulepreload" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/state.e5261683.js">
+    <link rel="modulepreload" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/composables.f13ebb41.js">
+    <link rel="modulepreload" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/useMobile.e76ff043.js">
+    <link rel="modulepreload" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/index.9637997c.js">
+    <link rel="preload" as="style" href="https://fielddaysound.tv/_nuxt/marqueeMobile.5e5c9ea9.css">
+    <link rel="modulepreload" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/marqueeMobile.402d4ffa.js">
+    <link rel="prefetch" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/web-vitals.bd683175.js">
+    <link rel="prefetch" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/browser.8cf3da55.js">
+    <link rel="prefetch" as="script" crossorigin href="https://fielddaysound.tv/_nuxt/error-component.9c171c20.js">
+    <link rel="prefetch" as="style" href="https://fielddaysound.tv/_nuxt/error-component.06030ad0.css">
+    <link rel="prefetch" as="image" type="image/svg+xml" href="https://fielddaysound.tv/_nuxt/logo.78817b08.svg">
+    <link rel="prefetch" as="image" type="image/svg+xml" href="https://fielddaysound.tv/_nuxt/logo-fds.e2b84414.svg">
+    <link rel="stylesheet" href="https://fielddaysound.tv/_nuxt/entry.d23ba404.css">
+    <link rel="stylesheet" href="https://fielddaysound.tv/_nuxt/marqueeMobile.5e5c9ea9.css">
+    <style>
+        .l__layout {
+            background-color: #edece8;
+            height: 100%;
+            min-height: 100vh;
+            min-height: calc(var(--vh, 1vh)*100);
+            overflow: hidden;
+            position: relative;
+            width: 100%
+        }
+
+        .l__layout.--homepage-modifier {
+            overflow: unset
+        }
+
+        /* Toggle Styles */
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #131313;
+            transition: color 0.3s ease;
+            padding: 0.5rem;
+            position: fixed;
+            top: 1.5rem;
+            right: 5rem;
+            /* Adjusted to not overlap with menu */
+            z-index: 100;
+        }
+
+        @media only screen and (min-width:1024px) {
+            .theme-toggle {
+                right: 8rem;
+                top: 2rem;
+            }
+        }
+
+        .theme-toggle:hover {
+            color: #fb5eff;
+            /* Pink accent */
+            transform: rotate(15deg);
+        }
+
+        /* Dark Mode Overrides */
+        body.dark-mode .l__layout {
+            background-color: #0f172a;
+        }
+
+        body.dark-mode .l__menu a,
+        body.dark-mode .l__menu p,
+        body.dark-mode .menu__logo {
+            color: #ffffff;
+        }
+
+        body.dark-mode .menu__logo img {
+            filter: invert(0);
+            /* Reset invert for dark mode if needed, or adjust */
+        }
+
+        body.dark-mode .theme-toggle {
+            color: #ffffff;
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            color: #fb5eff;
+        }
+    </style>
+    <style>
+        .l__menu[data-v-a74793ee] {
+            display: flex;
+            justify-content: flex-start;
+            left: 0;
+            mix-blend-mode: difference;
+            padding: 1.5rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 12
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .l__menu[data-v-a74793ee] {
+                padding: 1.5rem 8rem 0 1.5rem
+            }
+        }
+
+        .l__menu a[data-v-a74793ee],
+        .l__menu p[data-v-a74793ee] {
+            color: #131313;
+            transition: .3s ease
+        }
+
+        .l__menu .link-active[data-v-a74793ee]:before {
+            background-color: #fff;
+            bottom: 0;
+            height: 1.5px
+        }
+
+        .menu__logo[data-v-a74793ee] {
+            color: #131313;
+            font-family: Montreal-Medium, sans-serif;
+            font-size: 1.4rem;
+            height: auto;
+            height: 43px;
+            line-height: 1.68rem;
+            text-decoration: none;
+            white-space: nowrap;
+            width: 132px
+        }
+
+        .menu__logo img[data-v-a74793ee] {
+            filter: invert(1)
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .menu__logo img[data-v-a74793ee] {
+                height: 60px;
+                margin-left: 50px;
+                width: 170px
+            }
+
+            .menu__logo[data-v-a74793ee] {
+                width: 73rem
+            }
+        }
+
+        .menu__links[data-v-a74793ee] {
+            display: flex;
+            margin-left: auto;
+            margin-top: 7px
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .menu__links[data-v-a74793ee] {
+                margin-left: unset;
+                margin-top: unset
+            }
+        }
+
+        .menu__links--item[data-v-a74793ee] {
+            display: flex;
+            flex-direction: column
+        }
+
+        .menu__links--item a[data-v-a74793ee],
+        .menu__links--item p[data-v-a74793ee] {
+            color: #131313;
+            color: #fff;
+            font-family: Montreal-Medium, sans-serif;
+            font-size: 1.4rem;
+            line-height: 1.68rem
+        }
+
+        .menu__links--item .menu__link--label[data-v-a74793ee] {
+            margin-bottom: 1.5rem
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+
+            .menu__links--item:hover .menu__links--sub[data-v-a74793ee],
+            .menu__links--item:hover a[data-v-a74793ee],
+            .menu__links--item:hover p[data-v-a74793ee] {
+                opacity: 1 !important
+            }
+        }
+
+        .sublinks--item[data-v-a74793ee] {
+            transition: .3s ease
+        }
+
+        .menu__links--sub[data-v-a74793ee] {
+            display: none
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .menu__links--sub[data-v-a74793ee] {
+                display: flex;
+                flex-direction: column;
+                transition: .3s ease
+            }
+
+            .menu__links--sub.--visible[data-v-a74793ee] {
+                opacity: 1
+            }
+
+            .menu__links--sub.--hidden[data-v-a74793ee] {
+                opacity: 0
+            }
+        }
+
+        .menu--work[data-v-a74793ee] {
+            margin-right: 5.5rem
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .menu--work[data-v-a74793ee] {
+                margin-right: 15rem
+            }
+
+            .menu--about[data-v-a74793ee] {
+                width: 27.1rem
+            }
+        }
+    </style>
+    <style>
+        .custom__cursor[data-v-34226b7a] {
+            background: #fb5eff;
+            border-radius: 40px;
+            display: none;
+            height: 13px;
+            pointer-events: none;
+            position: fixed;
+            width: 13px;
+            z-index: 100
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .custom__cursor[data-v-34226b7a] {
+                display: block
+            }
+        }
+
+        .cursor__drag[data-v-34226b7a] {
+            display: none
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .cursor__drag[data-v-34226b7a] {
+                color: #fff;
+                display: block;
+                font-family: Montreal-Medium, sans-serif;
+                font-size: 1.6rem;
+                mix-blend-mode: difference;
+                opacity: 0;
+                transform: translate(-35%, -120%);
+                width: -moz-fit-content;
+                width: fit-content
+            }
+        }
+    </style>
+    <style>
+        .l__preloader[data-v-4427c189] {
+            background-color: #131313;
+            height: 100vh;
+            height: calc(var(--vh, 1vh)*100);
+            left: 0;
+            position: fixed;
+            top: 0;
+            inset: 0;
+            width: 100%;
+            z-index: 999
+        }
+
+        .preloader__company[data-v-4427c189] {
+            color: #fff;
+            font-family: Tusker, sans-serif;
+            font-size: 50px;
+            font-variation-settings: "HGHT" 35, "wdth" 1;
+            font-weight: 100;
+            left: 15px;
+            line-height: 55px;
+            position: absolute;
+            text-transform: uppercase;
+            top: -8px;
+            z-index: 1
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .preloader__company[data-v-4427c189] {
+                bottom: .5rem;
+                font-size: 50px;
+                left: 1.5rem;
+                line-height: unset;
+                top: unset
+            }
+        }
+
+        .preloader__number[data-v-4427c189] {
+            bottom: 5px;
+            color: #fb5eff;
+            font-family: Tusker, sans-serif;
+            font-size: 180px;
+            font-variation-settings: "HGHT" 35, "wdth" 0;
+            font-weight: 100;
+            left: 15px;
+            line-height: 340px;
+            position: absolute;
+            text-transform: uppercase;
+            z-index: 1
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .preloader__number[data-v-4427c189] {
+                bottom: 0;
+                left: 70%
+            }
+        }
+
+        .preloader__loading[data-v-4427c189] {
+            bottom: 10px;
+            color: #fff;
+            font-family: Tusker, sans-serif;
+            font-size: 50px;
+            font-variation-settings: "HGHT" 35, "wdth" 0;
+            font-weight: 100;
+            position: absolute;
+            right: 15px;
+            text-transform: uppercase;
+            z-index: 1
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .preloader__loading[data-v-4427c189] {
+                bottom: .5rem;
+                right: 1.5rem
+            }
+        }
+    </style>
+    <style>
+        :root {
+            --image1: 100%;
+            --image2: 100%
+        }
+
+        .marquee {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            touch-action: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            z-index: 2
+        }
+
+        .marquee.home__marquee {
+            margin-bottom: 0;
+            padding-bottom: 26px;
+            z-index: 10
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .marquee.home__marquee {
+                margin-bottom: unset;
+                padding-bottom: unset
+            }
+        }
+
+        .marquee .home__project {
+            cursor: pointer;
+            will-change: transform
+        }
+
+        .marquee .marquee__inner {
+            align-items: flex-end;
+            display: flex;
+            height: 25rem;
+            touch-action: none
+        }
+
+        .marquee .title--container {
+            align-items: flex-end;
+            display: flex;
+            height: 25rem;
+            opacity: 0;
+            transform: translateY(20rem)
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .marquee .title--container:hover .title {
+                color: #fb5eff;
+                opacity: 1
+            }
+        }
+
+        .marquee h1 {
+            font-family: Tusker, sans-serif;
+            font-size: 5.5rem;
+            font-weight: 100;
+            line-height: 11rem;
+            margin: 0 1rem;
+            pointer-events: none;
+            text-transform: uppercase;
+            white-space: nowrap
+        }
+
+        .marquee h1 ::-moz-selection {
+            background-color: transparent
+        }
+
+        .marquee h1 ::selection {
+            background-color: transparent
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .marquee h1 {
+                font-size: 19rem;
+                line-height: 34rem;
+                margin: 0 4rem
+            }
+        }
+
+        .marquee h1 .SplitTextJS-char {
+            --fontHeight: 35;
+            --fontWidth: 1;
+            font-variation-settings: "hght" var(--fontHeight), "wdth" var(--fontWidth)
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .marquee h1 .SplitTextJS-char {
+                --fontHeight: 1;
+                --fontWidth: 1
+            }
+        }
+
+        .selected__image--wrapper {
+            height: 100vh;
+            inset: 0;
+            pointer-events: none;
+            position: fixed;
+            width: 100vw;
+            z-index: 9
+        }
+
+        .selected__image {
+            --clip1: 100;
+            --clip2: 100;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% var(--clip1), 0 var(--clip2));
+            clip-path: polygon(0 0, 100% 0, 100% var(--clip1), 0 var(--clip2));
+            height: 20.7rem;
+            pointer-events: none;
+            position: fixed;
+            width: 38.3rem;
+            z-index: 1
+        }
+
+        .selected__image .selected--image {
+            --image1: 100%;
+            --image2: 100%;
+            -webkit-clip-path: polygon(0 var(--image1), 100% var(--image2), 100% 100%, 0 100%);
+            clip-path: polygon(0 var(--image1), 100% var(--image2), 100% 100%, 0 100%);
+            height: 100%;
+            left: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 2
+        }
+
+        .selected__image .selected__image--name {
+            font-family: Montreal-Medium, sans-serif;
+            font-size: 1.4rem;
+            left: 0;
+            line-height: 1.68rem;
+            position: absolute;
+            top: 1rem;
+            z-index: 1
+        }
+
+        .mouseleave {
+            display: none
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .mouseleave {
+                display: block;
+                height: calc(100vh - 20rem);
+                inset: 0;
+                position: fixed;
+                width: 100%;
+                z-index: 3
+            }
+        }
+
+        .home__image--mobile {
+            height: 100vh;
+            height: calc(var(--vh, 1vh)*100);
+            min-height: 100vh;
+            min-height: calc(var(--vh, 1vh)*100);
+            width: 100vw
+        }
+
+        .home__image--mobile video {
+            height: 100%;
+            inset: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+            position: absolute;
+            width: 100%
+        }
+
+        @media (min-width:650px) and (max-width:1024px) {
+            .home__image--mobile {
+                top: 45%
+            }
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .home__image--mobile {
+                display: none
+            }
+        }
+
+        .title--container.--mobile-active h1,
+        .title--container.--mobile-active h1 span {
+            color: #fb5eff
+        }
+
+        .title--container {
+            transition: color 1s ease
+        }
+
+        @media only screen and (min-width:1024px) and (hover:hover) {
+            .title--container {
+                transition: color unset
+            }
+
+            .noimagemarquee:hover .title {
+                color: #edece8;
+                opacity: .25
+            }
+        }
+
+        .fullscreen-background {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%
+        }
+
+        .fullscreen-background img,
+        .fullscreen-background video {
+            height: 100%;
+            left: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transform: scale(1.2);
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+    <div id="__nuxt"><!--[-->
+        <div class="l__layout">
+            <div class="transition--wrapper"><img class="transition--logo" id="logo-pink"
+                    src="https://fielddaysound.tv/_nuxt/logo-fds.e2b84414.svg" alt="Logo Field Day Sound"></div>
+            <div class="transition--wrapper transition--wrapper-sub"></div>
+            <div class="l__menu" data-v-a74793ee><a aria-current="page" href="/"
+                    class="router-link-active router-link-exact-active menu__logo" data-v-a74793ee><img
+                        class="menu__logo--img" src="https://fielddaysound.tv/_nuxt/logo.78817b08.svg"
+                        alt="Field Day Sound logo" data-v-a74793ee></a>
+                <div class="menu__links" data-v-a74793ee>
+                    <div class="menu__links--item menu--work" data-v-a74793ee><a href="https://fielddaysound.tv/work"
+                            class="menu__link--label link-active" data-v-a74793ee>Work</a>
+                        <div class="menu__links--sub" data-v-a74793ee><a
+                                href="https://fielddaysound.tv/work?category=sound-design"
+                                class="sublinks--item link-active" data-v-a74793ee>Sound Design</a><a
+                                href="https://fielddaysound.tv/work?category=music" class="sublinks--item link-active"
+                                data-v-a74793ee>Music</a><a href="https://fielddaysound.tv/work?category=mix"
+                                class="sublinks--item link-active" data-v-a74793ee>Mix</a></div>
+                    </div>
+                    <div class="menu__links--item menu--about" data-v-a74793ee><a href="https://fielddaysound.tv/about"
+                            class="menu__link--label link-active" data-v-a74793ee>About</a>
+                        <p class="menu__links--sub" data-v-a74793ee>We are a creative sound and music company</p>
+                    </div>
+                </div>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" style="display: none;">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                    </path>
+                </svg>
+                <svg class="icon-moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <div class="custom__cursor" data-v-34226b7a>
+                <div class="cursor__drag" data-v-34226b7a>DRAG</div>
+            </div>
+            <div class="l__preloader" data-v-4427c189>
+                <h2 class="preloader__company" data-v-4427c189> we are a creative sound and music company. </h2>
+                <p class="preloader__number" data-v-4427c189>0</p>
+                <h2 class="preloader__loading" data-v-4427c189>Loading</h2>
+            </div><!--[-->
+            <div><!--[--><!--[-->
+                <div class="l__marquee" style="display:none;">
+                    <div class="fullscreen-background"></div>
+                    <div class="marquee home__marquee noimagemarquee">
+                        <div class="marquee__inner"><!--[-->
+                            <div class="home__project marquee--item">
+                                <div draggable="false" class="title--container" data-index="0"
+                                    data-to="/project/amiabadperson"
+                                    data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/Zs66mUaF0TcGJcx1_short_nike_AmIABadPerson.mp4"
+                                    data-projectid="amiabadperson" data-projectName="Am I A Bad Person"
+                                    data-section-slider>
+                                    <h1 class="title">Nike</h1>
+                                </div>
+                            </div>
+                            <div class="home__project marquee--item">
+                                <div draggable="false" class="title--container" data-index="1" data-to="/project/hinge"
+                                    data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/ZxlD-oF3NbkBX8lN_short_Hinge.mp4"
+                                    data-projectid="hinge" data-projectName="Designed To Be Deleted"
+                                    data-section-slider>
+                                    <h1 class="title">Hinge</h1>
+                                </div>
+                            </div>
+                            <div class="home__project marquee--item">
+                                <div draggable="false" class="title--container" data-index="2"
+                                    data-to="/project/nike-so-win"
+                                    data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/Z7_5z57c43Q3gScO_SHORT_NIKE_WOMENS_SO_WIN_60_16X9_SOCIA.mp4"
+                                    data-projectid="nike-so-win" data-projectName="So Win." data-section-slider>
+                                    <h1 class="title">Nike</h1>
+                                </div>
+                            </div>
+                            <div class="home__project marquee--item">
+                                <div draggable="false" class="title--container" data-index="3" data-to="/project/yeti"
+                                    data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/aRzWjGGnmrmGp__a_YetiSmall.mp4"
+                                    data-projectid="yeti" data-projectName="Bad Idea" data-section-slider>
+                                    <h1 class="title">YETI</h1>
+                                </div>
+                            </div>
+                            <div class="home__project marquee--item">
+                                <div draggable="false" class="title--container" data-index="4" data-to="/project/pella"
+                                    data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/aK4HvGGNHVfTOVrg_PellaShort.mp4"
+                                    data-projectid="pella" data-projectName="Make Life Brighter" data-section-slider>
+                                    <h1 class="title">Pella</h1>
+                                </div>
+                            </div>
+                            <div class="home__project marquee--item">
+                                <div draggable="false" class="title--container" data-index="5"
+                                    data-to="/project/taylormade"
+                                    data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/aPvjbbpReVYa3qSX__2505_TaylorMadeQi-DC-_SHORT.mp4"
+                                    data-projectid="taylormade" data-projectName="Straight Distance"
+                                    data-section-slider>
+                                    <h1 class="title">TaylorMade</h1>
+                                </div>
+                            </div>
+                            <div class="home__project marquee--item">
+                                <div draggable="false" class="title--container" data-index="6"
+                                    data-to="/project/still-moving.-still-pushing.--still-unstoppable.-l"
+                                    data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/aK4bp2GNHVfTOVzl_LuluShort.mp4"
+                                    data-projectid="still-moving.-still-pushing.--still-unstoppable.-l"
+                                    data-projectName="Metal Vent Tech" data-section-slider>
+                                    <h1 class="title">Lululemon</h1>
+                                </div>
+                            </div><!--]-->
+                        </div>
+                    </div>
+                    <div class="mouseleave"></div>
+                </div>
+                <div style="display:none;">
+                    <div class="home__image--mobile"><!--[--><video class="project__video"
+                            src="https://field-day-sound.cdn.prismic.io/field-day-sound/Zs66mUaF0TcGJcx1_short_nike_AmIABadPerson.mp4"
+                            playsinline muted autoplay loop data-videoid="amiabadperson"></video><video
+                            class="project__video"
+                            src="https://field-day-sound.cdn.prismic.io/field-day-sound/ZxlD-oF3NbkBX8lN_short_Hinge.mp4"
+                            playsinline muted autoplay loop data-videoid="hinge"></video><video class="project__video"
+                            src="https://field-day-sound.cdn.prismic.io/field-day-sound/Z7_5z57c43Q3gScO_SHORT_NIKE_WOMENS_SO_WIN_60_16X9_SOCIA.mp4"
+                            playsinline muted autoplay loop data-videoid="nike-so-win"></video><video
+                            class="project__video"
+                            src="https://field-day-sound.cdn.prismic.io/field-day-sound/aRzWjGGnmrmGp__a_YetiSmall.mp4"
+                            playsinline muted autoplay loop data-videoid="yeti"></video><video class="project__video"
+                            src="https://field-day-sound.cdn.prismic.io/field-day-sound/aK4HvGGNHVfTOVrg_PellaShort.mp4"
+                            playsinline muted autoplay loop data-videoid="pella"></video><video class="project__video"
+                            src="https://field-day-sound.cdn.prismic.io/field-day-sound/aPvjbbpReVYa3qSX__2505_TaylorMadeQi-DC-_SHORT.mp4"
+                            playsinline muted autoplay loop data-videoid="taylormade"></video><video
+                            class="project__video"
+                            src="https://field-day-sound.cdn.prismic.io/field-day-sound/aK4bp2GNHVfTOVzl_LuluShort.mp4"
+                            playsinline muted autoplay loop
+                            data-videoid="still-moving.-still-pushing.--still-unstoppable.-l"></video><!--]--></div>
+                    <div class="marquee home__marquee">
+                        <div class="marquee__inner"><!--[-->
+                            <div class="home__project marquee--item"><a
+                                    href="https://fielddaysound.tv/project/amiabadperson" class="">
+                                    <div class="title--container" data-index="0"
+                                        data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/Zs66mUaF0TcGJcx1_short_nike_AmIABadPerson.mp4"
+                                        data-projectid="amiabadperson" data-clientname="Nike" data-section-slider>
+                                        <h1 class="title">Nike</h1>
+                                    </div>
+                                </a></div>
+                            <div class="home__project marquee--item"><a href="https://fielddaysound.tv/project/hinge"
+                                    class="">
+                                    <div class="title--container" data-index="1"
+                                        data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/ZxlD-oF3NbkBX8lN_short_Hinge.mp4"
+                                        data-projectid="hinge" data-clientname="Hinge" data-section-slider>
+                                        <h1 class="title">Hinge</h1>
+                                    </div>
+                                </a></div>
+                            <div class="home__project marquee--item"><a
+                                    href="https://fielddaysound.tv/project/nike-so-win" class="">
+                                    <div class="title--container" data-index="2"
+                                        data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/Z7_5z57c43Q3gScO_SHORT_NIKE_WOMENS_SO_WIN_60_16X9_SOCIA.mp4"
+                                        data-projectid="nike-so-win" data-clientname="Nike" data-section-slider>
+                                        <h1 class="title">Nike</h1>
+                                    </div>
+                                </a></div>
+                            <div class="home__project marquee--item"><a href="https://fielddaysound.tv/project/yeti"
+                                    class="">
+                                    <div class="title--container" data-index="3"
+                                        data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/aRzWjGGnmrmGp__a_YetiSmall.mp4"
+                                        data-projectid="yeti" data-clientname="YETI" data-section-slider>
+                                        <h1 class="title">YETI</h1>
+                                    </div>
+                                </a></div>
+                            <div class="home__project marquee--item"><a href="https://fielddaysound.tv/project/pella"
+                                    class="">
+                                    <div class="title--container" data-index="4"
+                                        data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/aK4HvGGNHVfTOVrg_PellaShort.mp4"
+                                        data-projectid="pella" data-clientname="Pella" data-section-slider>
+                                        <h1 class="title">Pella</h1>
+                                    </div>
+                                </a></div>
+                            <div class="home__project marquee--item"><a
+                                    href="https://fielddaysound.tv/project/taylormade" class="">
+                                    <div class="title--container" data-index="5"
+                                        data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/aPvjbbpReVYa3qSX__2505_TaylorMadeQi-DC-_SHORT.mp4"
+                                        data-projectid="taylormade" data-clientname="TaylorMade" data-section-slider>
+                                        <h1 class="title">TaylorMade</h1>
+                                    </div>
+                                </a></div>
+                            <div class="home__project marquee--item"><a
+                                    href="https://fielddaysound.tv/project/still-moving.-still-pushing.--still-unstoppable.-l"
+                                    class="">
+                                    <div class="title--container" data-index="6"
+                                        data-thumbnail="https://field-day-sound.cdn.prismic.io/field-day-sound/aK4bp2GNHVfTOVzl_LuluShort.mp4"
+                                        data-projectid="still-moving.-still-pushing.--still-unstoppable.-l"
+                                        data-clientname="Lululemon" data-section-slider>
+                                        <h1 class="title">Lululemon</h1>
+                                    </div>
+                                </a></div><!--]-->
+                        </div>
+                    </div>
+                </div><!--]--><!--]-->
+            </div><!--]-->
+        </div><!--]-->
+    </div>
+    <script>window.__NUXT__ = (function (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, _, $, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, aA, aB, aC, aD, aE, aF, aG, aH, aI, aJ, aK, aL, aM, aN, aO, aP, aQ, aR, aS, aT, aU, aV, aW, aX, aY, aZ) { return { data: { menu: { id: "Y7_dXxEAACUAcMZA", uid: i, url: i, type: r, href: "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Fapi\u002Fv2\u002Fdocuments\u002Fsearch?ref=aRzcVhcAACgAiGrs&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22Y7_dXxEAACUAcMZA%22%29+%5D%5D", tags: [], first_publication_date: "2023-01-12T10:13:54+0000", last_publication_date: "2023-03-07T04:59:00+0000", slugs: [r], linked_documents: [], lang: b, alternate_languages: [], data: { work_label: "Work", about_label: "About", about_copy: "We are a creative sound and music company" } }, homepage_projects: { id: s, uid: i, url: i, type: t, href: u, tags: [], first_publication_date: v, last_publication_date: w, slugs: [x], linked_documents: [], lang: b, alternate_languages: [], data: { featured_projects: [{ project: { id: y, type: d, tags: [], lang: b, slug: g, first_publication_date: z, last_publication_date: A, uid: j, data: { client_name: k, project_visual: { link_type: a, key: B, kind: e, id: C, url: D, name: E, size: F }, uid: j, project_name: G, project_thumbnail: { link_type: a, key: "2503be1d-c134-42e1-863e-fe0103cdcb9a", kind: h, id: "Zs63okaF0TcGJcxH", url: "https:\u002F\u002Fimages.prismic.io\u002Ffield-day-sound\u002FZs63okaF0TcGJcxH_OLY_0010_Frame128.png?auto=format,compress?auto=compress,format", name: "OLY_0010_Frame128.png", size: "3176448", width: H, height: I } }, link_type: f, key: J, isBroken: c } }, { project: { id: K, type: d, tags: [], lang: b, slug: L, first_publication_date: M, last_publication_date: N, uid: l, data: { client_name: O, project_visual: { link_type: a, key: P, kind: e, id: Q, url: R, name: S, size: T }, uid: l, project_name: U, project_thumbnail: { link_type: a, key: "4c86a7fa-1e6d-44b9-99e5-f904e7ab1ca6", kind: h, id: "ZxlD9IF3NbkBX8lK", url: "https:\u002F\u002Fimages.prismic.io\u002Ffield-day-sound\u002FZxlD9IF3NbkBX8lK_Hinge_Pic_03.jpg?auto=format,compress?auto=compress,format", name: "Hinge_Pic_03.jpg", size: "542402", width: "3824", height: "2144" } }, link_type: f, key: V, isBroken: c } }, { project: { id: W, type: d, tags: [], lang: b, slug: X, first_publication_date: Y, last_publication_date: Z, uid: m, data: { client_name: k, project_visual: { link_type: a, key: _, kind: e, id: $, url: aa, name: ab, size: ac }, uid: m, project_name: ad, project_thumbnail: { link_type: a, key: "55604cce-c6fa-4085-bf53-610b2909ee82", kind: h, id: "Z7_0op7c43Q3gSbQ", url: "https:\u002F\u002Fimages.prismic.io\u002Ffield-day-sound\u002FZ7_0op7c43Q3gSbQ_NikeSoWinPRStill.png?auto=format,compress?auto=compress,format", name: "Nike So Win PR Still.png", size: "3135836", width: H, height: I } }, link_type: f, key: ae, isBroken: c } }, { project: { id: af, type: d, tags: [], lang: b, slug: g, first_publication_date: ag, last_publication_date: ah, uid: n, data: { client_name: ai, project_visual: { link_type: a, key: aj, kind: e, id: ak, url: al, name: am, size: an }, uid: n, project_name: ao, project_thumbnail: { link_type: a, key: "61d7060f-68d0-4ece-87e8-d237118052cc", kind: h, id: "aRzWcWGnmrmGp__T", url: "https:\u002F\u002Fimages.prismic.io\u002Ffield-day-sound\u002FaRzWcWGnmrmGp__T_Yeti_Still.jpg?auto=format,compress?auto=compress,format", name: "Yeti_Still.jpg", size: "130216", width: "2932", height: "1624" } }, link_type: f, key: ap, isBroken: c } }, { project: { id: aq, type: d, tags: [], lang: b, slug: g, first_publication_date: ar, last_publication_date: as, uid: o, data: { client_name: at, project_visual: { link_type: a, key: au, kind: e, id: av, url: aw, name: ax, size: ay }, uid: o, project_name: az, project_thumbnail: { link_type: a, key: "df3d5ec6-4870-4475-accd-ecb44228cf37", kind: h, id: "aK4Gt2GNHVfTOVrW", url: "https:\u002F\u002Fimages.prismic.io\u002Ffield-day-sound\u002FaK4Gt2GNHVfTOVrW_PellaLightning.png?auto=format,compress?auto=compress,format", name: "Pella Lightning.png", size: "9416563", width: "3806", height: "2130" } }, link_type: f, key: aA, isBroken: c } }, { project: { id: aB, type: d, tags: [], lang: b, slug: g, first_publication_date: aC, last_publication_date: aD, uid: p, data: { client_name: aE, project_visual: { link_type: a, key: aF, kind: e, id: aG, url: aH, name: aI, size: aJ }, uid: p, project_name: aK, project_thumbnail: { link_type: a, key: "f06563ff-1e69-4a57-ac43-029955a26ccc", kind: h, id: "aPvis7pReVYa3qSO", url: "https:\u002F\u002Fimages.prismic.io\u002Ffield-day-sound\u002FaPvis7pReVYa3qSO_screenshot.jpg?auto=format,compress?auto=compress,format", name: "screenshot.jpg", size: "326744", width: "3138", height: "1878" } }, link_type: f, key: aL, isBroken: c } }, { project: { id: aM, type: d, tags: [], lang: b, slug: g, first_publication_date: aN, last_publication_date: aO, uid: q, data: { client_name: aP, project_visual: { link_type: a, key: aQ, kind: e, id: aR, url: aS, name: aT, size: aU }, uid: q, project_name: aV, project_thumbnail: { link_type: a, key: "05655ce1-2ebd-4df6-acc1-55b9b487e8f2", kind: h, id: "aK4c3mGNHVfTOV0A", url: "https:\u002F\u002Fimages.prismic.io\u002Ffield-day-sound\u002FaK4c3mGNHVfTOV0A_LuluHoverClose.jpg?auto=format,compress?auto=compress,format", name: "Lulu Hover Close.jpg", size: "54216", width: "2204", height: "1260" } }, link_type: f, key: aW, isBroken: c } }], seo_title: aX, seo_description: aY } }, Homepage: { id: s, uid: i, url: i, type: t, href: u, tags: [], first_publication_date: v, last_publication_date: w, slugs: [x], linked_documents: [], lang: b, alternate_languages: [], data: { featured_projects: [{ project: { id: y, type: d, tags: [], lang: b, slug: g, first_publication_date: z, last_publication_date: A, uid: j, data: { project_name: G, client_name: k, uid: j, project_visual: { link_type: a, key: B, kind: e, id: C, url: D, name: E, size: F } }, link_type: f, key: J, isBroken: c } }, { project: { id: K, type: d, tags: [], lang: b, slug: L, first_publication_date: M, last_publication_date: N, uid: l, data: { project_name: U, client_name: O, uid: l, project_visual: { link_type: a, key: P, kind: e, id: Q, url: R, name: S, size: T } }, link_type: f, key: V, isBroken: c } }, { project: { id: W, type: d, tags: [], lang: b, slug: X, first_publication_date: Y, last_publication_date: Z, uid: m, data: { project_name: ad, client_name: k, uid: m, project_visual: { link_type: a, key: _, kind: e, id: $, url: aa, name: ab, size: ac } }, link_type: f, key: ae, isBroken: c } }, { project: { id: af, type: d, tags: [], lang: b, slug: g, first_publication_date: ag, last_publication_date: ah, uid: n, data: { project_name: ao, client_name: ai, uid: n, project_visual: { link_type: a, key: aj, kind: e, id: ak, url: al, name: am, size: an } }, link_type: f, key: ap, isBroken: c } }, { project: { id: aq, type: d, tags: [], lang: b, slug: g, first_publication_date: ar, last_publication_date: as, uid: o, data: { project_name: az, client_name: at, uid: o, project_visual: { link_type: a, key: au, kind: e, id: av, url: aw, name: ax, size: ay } }, link_type: f, key: aA, isBroken: c } }, { project: { id: aB, type: d, tags: [], lang: b, slug: g, first_publication_date: aC, last_publication_date: aD, uid: p, data: { project_name: aK, client_name: aE, uid: p, project_visual: { link_type: a, key: aF, kind: e, id: aG, url: aH, name: aI, size: aJ } }, link_type: f, key: aL, isBroken: c } }, { project: { id: aM, type: d, tags: [], lang: b, slug: g, first_publication_date: aN, last_publication_date: aO, uid: q, data: { project_name: aV, client_name: aP, uid: q, project_visual: { link_type: a, key: aQ, kind: e, id: aR, url: aS, name: aT, size: aU } }, link_type: f, key: aW, isBroken: c } }], seo_title: aX, seo_description: aY } } }, state: { $sfirstLoaded: c }, _errors: {}, serverRendered: aZ, config: { public: { "@nuxtjs/prismic": { endpoint: "https:\u002F\u002Ffield-day-sound.prismic.io\u002Fapi\u002Fv2", clientConfig: {}, client: "~\u002Fapp\u002Fprismic\u002Fclient", linkResolver: "~\u002Fapp\u002Fprismic\u002FlinkResolver", htmlSerializer: "~\u002Fapp\u002Fprismic\u002FhtmlSerializer", injectComponents: aZ, components: {}, preview: c, toolbar: c } }, app: { baseURL: "\u002F", buildAssetsDir: "\u002F_nuxt\u002F", cdnURL: "" } } } }("Media", "en-us", false, "project", "file", "Document", "1", "image", null, "amiabadperson", "Nike", "hinge", "nike-so-win", "yeti", "pella", "taylormade", "still-moving.-still-pushing.--still-unstoppable.-l", "menu", "Y3_ZuREAACgAIT-E", "homepage_projects", "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Fapi\u002Fv2\u002Fdocuments\u002Fsearch?ref=aRzcVhcAACgAiGrs&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22Y3_ZuREAACgAIT-E%22%29+%5D%5D", "2022-11-24T20:53:16+0000", "2025-11-18T20:32:13+0000", "homepage", "Zs65ZhEAAB8AfIJM", "2024-08-28T05:45:15+0000", "2025-02-27T05:32:26+0000", "4994b30c-39cf-4616-8a58-51b39926f786", "Zs66mUaF0TcGJcx1", "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Ffield-day-sound\u002FZs66mUaF0TcGJcx1_short_nike_AmIABadPerson.mp4", "short_nike_Am I A Bad Person.mp4", "4400712", "Am I A Bad Person", "1920", "1080", "7f731d06-6545-4e47-9539-d21c7055b98a", "ZxlE6xMAACEAv9A4", "5", "2024-10-23T18:48:15+0000", "2025-11-18T20:32:57+0000", "Hinge", "9e10b9aa-43a4-4903-bb84-4470628bdbf5", "ZxlD-oF3NbkBX8lN", "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Ffield-day-sound\u002FZxlD-oF3NbkBX8lN_short_Hinge.mp4", "short_Hinge.mp4", "4737369", "Designed To Be Deleted", "a53abef6-151f-4b91-a5af-6cc06c3dee71", "Z7_0ZBAAACMAZFY5", "0", "2025-02-27T05:13:10+0000", "2025-02-27T05:36:21+0000", "fc1ee970-118a-4308-b3b3-df175668bd4d", "Z7_5z57c43Q3gScO", "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Ffield-day-sound\u002FZ7_5z57c43Q3gScO_SHORT_NIKE_WOMENS_SO_WIN_60_16X9_SOCIA.mp4", "SHORT_NIKE_WOMENS_SO_WIN_60_16X9_SOCIA.mp4", "5027789", "So Win.", "f798ec6b-c333-41e8-a323-c7a25c9ae95b", "aRzWChcAACkAiF7Z", "2025-11-18T20:29:31+0000", "2025-11-18T20:30:53+0000", "YETI", "2691f9b4-ff1c-401a-ac0a-1761a517dee4", "aRzWjGGnmrmGp__a", "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Ffield-day-sound\u002FaRzWjGGnmrmGp__a_YetiSmall.mp4", "Yeti Small.mp4", "4967087", "Bad Idea", "faee02b0-67bd-4141-8955-d2f72fe2c231", "aK4I0xIAACUAG9Sf", "2025-08-26T19:35:25+0000", "2025-08-26T19:37:28+0000", "Pella", "3faa9d19-85cc-46a2-a00a-571c32ad240e", "aK4HvGGNHVfTOVrg", "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Ffield-day-sound\u002FaK4HvGGNHVfTOVrg_PellaShort.mp4", "Pella Short.mp4", "20462922", "Make Life Brighter", "d0e8805d-44fc-4dac-bdcd-fd6e6b0a84b5", "aPviPxAAAB8AST8Z", "2025-10-24T20:42:52+0000", "2025-10-24T20:43:26+0000", "TaylorMade", "8943ec60-a894-4f77-863f-903e14752a8b", "aPvjbbpReVYa3qSX", "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Ffield-day-sound\u002FaPvjbbpReVYa3qSX__2505_TaylorMadeQi-DC-_SHORT.mp4", "_2505_TaylorMade Qi (DC)_SHORT.mp4", "4248548", "Straight Distance", "3e598e1e-148e-4b08-967d-3ab1140bb97d", "aK4cZRIAACMAG_NW", "2025-08-26T20:43:22+0000", "2025-08-26T20:45:26+0000", "Lululemon", "4448611b-c49d-4232-8670-12ac507d6ab1", "aK4bp2GNHVfTOVzl", "https:\u002F\u002Ffield-day-sound.cdn.prismic.io\u002Ffield-day-sound\u002FaK4bp2GNHVfTOVzl_LuluShort.mp4", "Lulu Short.mp4", "3500196", "Metal Vent Tech", "c7be094d-d7d7-4809-82ad-50fb08f22664", "Field Day Sound", "Award winning sound design, music, and mix for brands and directors across the globe. Based in Portland, Oregon.", true))</script>
+    <script type="module" src="https://fielddaysound.tv/_nuxt/entry.bdabb5c6.js" crossorigin></script>
+    <script type="module" src="https://fielddaysound.tv/_nuxt/default.c8ec9ed4.js" crossorigin></script>
+    <script type="module" src="https://fielddaysound.tv/_nuxt/index.9637997c.js" crossorigin></script>
+    <script>
+        // Theme Toggle Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.querySelector('.theme-toggle');
+            const sunIcon = document.querySelector('.icon-sun');
+            const moonIcon = document.querySelector('.icon-moon');
+            const body = document.body;
+
+            // Check saved theme
+            const savedTheme = localStorage.getItem('field_day_theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+
+            toggleBtn.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                const isDark = body.classList.contains('dark-mode');
+
+                // Update Icons
+                sunIcon.style.display = isDark ? 'block' : 'none';
+                moonIcon.style.display = isDark ? 'none' : 'block';
+
+                // Save Preference
+                localStorage.setItem('field_day_theme', isDark ? 'dark' : 'light');
+            });
+        });
+    </script>
+</body>
+
+</html>
